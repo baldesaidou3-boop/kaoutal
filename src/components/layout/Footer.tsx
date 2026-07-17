@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Kaoutal</h3>
             <p className="text-sm text-gray-400">
-              La marketplace des micro-entrepreneurs guinéens. Achetez et vendez en toute confiance.
+              La marketplace des micro/macro-entrepreneurs guinéens. Achetez et vendez en toute confiance.
             </p>
           </div>
           <div>

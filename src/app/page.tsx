@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">
-              La marketplace des micro-entrepreneurs guinéens
+              La marketplace des micro/macro-entrepreneurs guinéens
             </h1>
             <p className="text-lg md:text-xl text-emerald-100 mb-8">
               Kaoutal connecte les acheteurs aux vendeurs locaux. Mode, beauté, tech, alimentation, artisanat... Tout en un seul endroit.
@@ -92,7 +92,7 @@ export default function HomePage() {
       <section className="bg-white border-t border-gray-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Vous êtes un micro-entrepreneur ?
+            Vous êtes un micro/macro-entrepreneur ?
           </h2>
           <p className="text-gray-500 mb-8 max-w-lg mx-auto">
             Rejoignez Kaoutal et créez votre boutique en ligne gratuitement. Visibilité, communauté et paiements simplifiés.

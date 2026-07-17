@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     template: "%s | Kaoutal",
-    default: "Kaoutal - Marketplace des micro-entrepreneurs guinéens",
+    default: "Kaoutal - Marketplace des micro/macro-entrepreneurs guinéens",
   },
-  description: "Achetez et vendez sur Kaoutal, la marketplace qui connecte les micro-entrepreneurs de Guinée.",
+  description: "Achetez et vendez sur Kaoutal, la marketplace qui connecte les micro/macro-entrepreneurs de Guinée.",
 }
 
 export default function RootLayout({
