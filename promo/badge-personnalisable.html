@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badge Ambassadeur Kaoutal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    h1 { font-size: 24px; color: #059669; margin-bottom: 20px; }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .controls {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      width: 280px;
+    }
+    .controls label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 4px;
+      margin-top: 14px;
+    }
+    .controls label:first-child { margin-top: 0; }
+    .controls input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+    .controls input:focus {
+      border-color: #059669;
+      box-shadow: 0 0 0 2px rgba(5,150,105,0.1);
+    }
+    .badge-wrapper {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .badge-wrapper svg {
+      display: block;
+    }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+    .btn-primary { background: #059669; color: white; }
+    .btn-primary:hover { background: #047857; }
+    .btn-secondary { background: #e5e7eb; color: #374151; }
+    .btn-secondary:hover { background: #d1d5db; }
+    .info { font-size: 12px; color: #9ca3af; margin-top: 20px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>🏅 Badge Ambassadeur Kaoutal</h1>
+
+  <div class="container">
+    <div class="controls">
+      <label>Nom du vendeur</label>
+      <input type="text" id="vendeur" value="Aminata Diallo" oninput="updateBadge()">
+
+      <label>Numéro d'ambassadeur</label>
+      <input type="text" id="numero" value="N°001" oninput="updateBadge()">
+
+      <label>Couleur du badge</label>
+      <select id="couleur" onchange="updateBadge()" style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px;">
+        <option value="or">Or (Ambassadeur)</option>
+        <option value="argent">Argent (Premium)</option>
+        <option value="bronze">Bronze (Débutant)</option>
+      </select>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="imprimer()">🖨️ Imprimer</button>
+        <button class="btn btn-secondary" onclick="telecharger()">⬇️ Télécharger SVG</button>
+      </div>
+    </div>
+
+    <div class="badge-wrapper" id="badgeContainer">
+      <svg id="badgeSvg" xmlns="http://www.w3.org/2000/svg" width="400" height="420" viewBox="0 0 400 420">
+        <defs>
+          <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="badgeRibbon" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#059669"/>
+            <stop offset="100%" stop-color="#047857"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Ruban haut -->
+        <polygon points="200,10 225,70 175,70" fill="url(#badgeRibbon)"/>
+
+        <!-- Cercle médaille -->
+        <circle cx="200" cy="200" r="120" fill="url(#badgeGold)"/>
+        <circle cx="200" cy="200" r="111" fill="none" stroke="#fef3c7" stroke-width="2"/>
+        <circle cx="200" cy="200" r="105" fill="none" stroke="#fef3c7" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+        <!-- Étoile -->
+        <polygon points="200,100 220,150 265,150 230,180 242,230 200,200 158,230 170,180 135,150 180,150" fill="white"/>
+
+        <!-- Texte "Ambassadeur" -->
+        <text id="titleText" x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">Ambassadeur</text>
+
+        <!-- Nom du vendeur -->
+        <text id="nameText" x="200" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Aminata Diallo</text>
+
+        <!-- "Kaoutal" -->
+        <text x="200" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#a7f3d0">Kaoutal</text>
+
+        <!-- Ruban bas -->
+        <rect x="160" y="365" width="80" height="22" rx="4" fill="url(#badgeRibbon)"/>
+        <text id="numberText" x="200" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">N°001</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="info">Modifie les champs à gauche → le badge se met à jour en temps réel. Imprime ou télécharge.</div>
+
+  <script>
+    function getGradients(color) {
+      if (color === 'argent') return { main: ['#e5e7eb','#9ca3af'], text: '#4b5563', star: '#374151' };
+      if (color === 'bronze') return { main: ['#d97706','#92400e'], text: '#fef3c7', star: '#fbbf24' };
+      return { main: ['#fbbf24','#d97706'], text: '#92400e', star: 'white' };
+    }
+
+    function updateBadge() {
+      const vendeur = document.getElementById('vendeur').value || 'Vendeur';
+      const numero = document.getElementById('numero').value || 'N°001';
+      const couleur = document.getElementById('couleur').value;
+      const c = getGradients(couleur);
+
+      const svg = document.getElementById('badgeSvg');
+      const ns = 'http://www.w3.org/2000/svg';
+
+      // Update defs
+      const defs = svg.querySelector('defs');
+      defs.innerHTML = `
+        <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="${c.main[0]}"/>
+          <stop offset="100%" stop-color="${c.main[1]}"/>
+        </linearGradient>
+        <linearGradient id="badgeRibbon" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#059669"/>
+          <stop offset="100%" stop-color="#047857"/>
+        </linearGradient>
+      `;
+
+      // Update stars
+      const paths = svg.querySelectorAll('polygon');
+      if (paths.length >= 2) {
+        paths[1].setAttribute('fill', c.star);
+      }
+
+      // Update texts
+      document.getElementById('titleText').textContent = 'Ambassadeur';
+      document.getElementById('titleText').setAttribute('fill', c.text);
+      document.getElementById('nameText').textContent = vendeur;
+      document.getElementById('numberText').textContent = numero;
+    }
+
+    function telecharger() {
+      const svg = document.getElementById('badgeSvg');
+      const clone = svg.cloneNode(true);
+      const serializer = new XMLSerializer();
+      const svgStr = serializer.serializeToString(clone);
+      const blob = new Blob([svgStr], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `badge-kaoutal-${document.getElementById('vendeur').value || 'vendeur'}.svg`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function imprimer() {
+      const svg = document.getElementById('badgeSvg');
+      const clone = svg.cloneNode(true);
+      clone.setAttribute('width', '400');
+      clone.setAttribute('height', '420');
+      const serializer = new XMLSerializer();
+      const svgStr = serializer.serializeToString(clone);
+
+      const win = window.open('', '_blank');
+      win.document.write(`
+        <html><head><title>Badge Kaoutal</title>
+        <style>
+          @page { margin: 0; }
+          body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+          @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          }
+        </style>
+        </head><body>${svgStr}</body></html>
+      `);
+      win.document.close();
+      setTimeout(() => { win.print(); }, 500);
+    }
+  </script>
+</body>
+</html>
