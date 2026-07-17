@@ -15,7 +15,7 @@ const categories = [
 ]
 
 const features = [
-  { icon: Store, title: "Micro-entrepreneurs", desc: "Chaque vendeur a sa propre boutique" },
+  { icon: Store, title: "Micro/Macro-entrepreneurs", desc: "Chaque vendeur a sa propre boutique" },
   { icon: ShoppingBag, title: "10 niches", desc: "Mode, tech, alimentation, services..." },
   { icon: Users, title: "Communauté", desc: "Achetez local, soutenez l'économie guinéenne" },
   { icon: Shield, title: "Paiement sécurisé", desc: "Transactions via Orange Money & Mobile Money" },
