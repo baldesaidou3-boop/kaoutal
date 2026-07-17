@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Cercles décoratifs -->
+  <circle cx="100" cy="100" r="250" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="1100" cy="530" r="300" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Logo -->
+  <text x="100" y="180" font-size="80">🛍️</text>
+
+  <!-- Titre -->
+  <text x="100" y="270" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white">Kaoutal</text>
+  <text x="100" y="320" font-family="Arial, sans-serif" font-size="22" fill="#a7f3d0">Marketplace des micro/macro-entrepreneurs guinéens</text>
+
+  <!-- Avantages -->
+  <text x="100" y="390" font-family="Arial, sans-serif" font-size="18" fill="white">✅  Boutique gratuite en 2 minutes</text>
+  <text x="100" y="425" font-family="Arial, sans-serif" font-size="18" fill="white">✅  10 catégories disponibles</text>
+  <text x="100" y="460" font-family="Arial, sans-serif" font-size="18" fill="white">✅  Paiement Orange Money / Mobile Money</text>
+
+  <!-- Bouton CTA -->
+  <rect x="100" y="510" width="280" height="50" rx="25" fill="url(#gold)"/>
+  <text x="240" y="542" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#92400e">👉  Rejoins Kaoutal</text>
+
+  <!-- Badge ambassadeur à droite -->
+  <circle cx="850" cy="315" r="180" fill="url(#gold)" opacity="0.95"/>
+  <circle cx="850" cy="315" r="168" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+  <polygon points="850,200 876,260 928,260 888,295 902,350 850,320 798,350 812,295 772,260 824,260" fill="white"/>
+  <text x="850" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#92400e">Ambassadeur</text>
+  <text x="850" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Kaoutal</text>
+
+  <!-- URL en bas -->
+  <text x="600" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.5)">kaoutal.vercel.app</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Cercles décoratifs -->
+  <circle cx="540" cy="540" r="400" fill="rgba(255,255,255,0.02)"/>
+
+  <!-- Logo -->
+  <text x="540" y="280" text-anchor="middle" font-size="100">🛍️</text>
+
+  <!-- Titre -->
+  <text x="540" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">Kaoutal</text>
+  <text x="540" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#a7f3d0">🇬🇳 Marketplace Guinéenne 🇬🇳</text>
+
+  <!-- Avantages -->
+  <rect x="240" y="530" width="600" height="50" rx="10" fill="rgba(255,255,255,0.1)"/>
+  <text x="540" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="white">✅  Boutique gratuite en 2 minutes</text>
+
+  <rect x="240" y="600" width="600" height="50" rx="10" fill="rgba(255,255,255,0.1)"/>
+  <text x="540" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="white">✅  10 catégories de produits</text>
+
+  <rect x="240" y="670" width="600" height="50" rx="10" fill="rgba(255,255,255,0.1)"/>
+  <text x="540" y="702" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="white">✅  Paiement Mobile Money / Orange Money</text>
+
+  <rect x="240" y="740" width="600" height="50" rx="10" fill="rgba(255,255,255,0.1)"/>
+  <text x="540" y="772" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="white">✅  Premiers ambassadeurs récompensés</text>
+
+  <!-- Bouton CTA -->
+  <rect x="340" y="840" width="400" height="60" rx="30" fill="url(#btn)"/>
+  <text x="540" y="878" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#92400e">👉  JE LANCE MA BOUTIQUE</text>
+
+  <!-- URL -->
+  <text x="540" y="960" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.5)">kaoutal.vercel.app</text>
+</svg>
