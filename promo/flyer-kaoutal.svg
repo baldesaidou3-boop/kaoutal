@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="700" viewBox="0 0 500 700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#0d9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="500" height="700" fill="url(#bg)" rx="20"/>
+
+  <!-- Logo/Icone -->
+  <text x="250" y="120" text-anchor="middle" font-size="60">🛍️</text>
+
+  <!-- Titre -->
+  <text x="250" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Kaoutal</text>
+  <text x="250" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#a7f3d0">Marketplace Guinéenne</text>
+
+  <!-- Ligne séparatrice -->
+  <line x1="80" y1="270" x2="420" y2="270" stroke="#34d399" stroke-width="2"/>
+
+  <!-- Sous-titre -->
+  <text x="250" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="white">Tu es micro/macro-entrepreneur ?</text>
+  <text x="250" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0">Vends en ligne gratuitement !</text>
+
+  <!-- Avantages -->
+  <text x="70" y="400" font-family="Arial, sans-serif" font-size="14" fill="white">✓ Crée ta boutique en 2 minutes</text>
+  <text x="70" y="430" font-family="Arial, sans-serif" font-size="14" fill="white">✓ 10 catégories disponibles</text>
+  <text x="70" y="460" font-family="Arial, sans-serif" font-size="14" fill="white">✓ Paiement Mobile Money / Orange Money</text>
+  <text x="70" y="490" font-family="Arial, sans-serif" font-size="14" fill="white">✓ Visibilité nationale</text>
+
+  <!-- QR Code placeholder -->
+  <rect x="175" y="530" width="150" height="150" rx="10" fill="white"/>
+  <rect x="185" y="540" width="130" height="130" rx="5" fill="#059669"/>
+  <!-- QR code simplifié -->
+  <rect x="195" y="550" width="20" height="20" fill="white"/>
+  <rect x="225" y="550" width="20" height="20" fill="white"/>
+  <rect x="255" y="550" width="20" height="20" fill="white"/>
+  <rect x="285" y="550" width="10" height="10" fill="white"/>
+  <rect x="195" y="580" width="10" height="10" fill="white"/>
+  <rect x="255" y="580" width="30" height="30" fill="white"/>
+  <rect x="285" y="570" width="20" height="20" fill="white"/>
+  <rect x="195" y="600" width="30" height="30" fill="white"/>
+  <rect x="235" y="600" width="20" height="20" fill="white"/>
+  <rect x="285" y="600" width="10" height="10" fill="white"/>
+
+  <!-- Texte QR -->
+  <text x="250" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#a7f3d0">Scanne pour découvrir</text>
+</svg>

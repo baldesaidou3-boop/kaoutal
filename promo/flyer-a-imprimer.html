@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Flyer Kaoutal - À imprimer</title>
+  <style>
+    @page { margin: 0; size: 148mm 210mm; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; min-height: 100vh; background: #eee; padding: 20px; gap: 20px; }
+
+    .flyer {
+      width: 148mm; height: 210mm;
+      background: linear-gradient(135deg, #059669, #0d9488);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex; flex-direction: column;
+      color: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flyer::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .flyer::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .header { text-align: center; padding-top: 20px; position: relative; z-index: 1; }
+    .icon { font-size: 60px; }
+    .title { font-size: 42px; font-weight: bold; margin-top: 10px; }
+    .subtitle { font-size: 16px; color: #a7f3d0; margin-top: 5px; }
+
+    .divider { height: 2px; background: #34d399; margin: 20px 0; width: 70%; align-self: center; }
+
+    .cta-title { text-align: center; font-size: 18px; margin: 15px 0 5px; position: relative; z-index: 1; }
+    .cta-sub { text-align: center; font-size: 14px; color: #a7f3d0; position: relative; z-index: 1; }
+
+    .benefits { margin: 15px 0; position: relative; z-index: 1; }
+    .benefit { font-size: 14px; padding: 6px 0; }
+    .benefit::before { content: "✓ "; color: #34d399; font-weight: bold; }
+
+    .qr-section { text-align: center; margin: 15px 0; position: relative; z-index: 1; }
+    .qr-placeholder {
+      width: 130px; height: 130px; background: white;
+      border-radius: 10px; margin: 10px auto;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .qr-inner {
+      width: 110px; height: 110px; background: #059669;
+      border-radius: 5px; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .qr-pattern {
+      width: 90px; height: 90px;
+      display: grid;
+      grid-template-columns: repeat(9, 10px);
+      grid-template-rows: repeat(9, 10px);
+      gap: 0;
+    }
+    .qr-pattern div { background: white; }
+    .qr-pattern .bg { background: transparent; }
+
+    .qr-text { font-size: 11px; color: #a7f3d0; }
+
+    .footer { text-align: center; font-size: 10px; color: rgba(255,255,255,0.5); margin-top: auto; position: relative; z-index: 1; }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .flyer { box-shadow: none; border-radius: 0; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <div class="header">
+      <div class="icon">🛍️</div>
+      <div class="title">Kaoutal</div>
+      <div class="subtitle">Marketplace Guinéenne</div>
+    </div>
+    <div class="divider"></div>
+    <div class="cta-title">Tu es micro/macro-entrepreneur ?</div>
+    <div class="cta-sub">Vends en ligne gratuitement !</div>
+    <div class="benefits">
+      <div class="benefit">Crée ta boutique en 2 minutes</div>
+      <div class="benefit">10 catégories disponibles</div>
+      <div class="benefit">Paiement Mobile Money / Orange Money</div>
+      <div class="benefit">Visibilité nationale</div>
+    </div>
+    <div class="qr-section">
+      <div class="qr-placeholder">
+        <div class="qr-inner">
+          <div class="qr-pattern" id="qrGrid"></div>
+        </div>
+      </div>
+      <div class="qr-text">Scanne pour découvrir Kaoutal</div>
+    </div>
+    <div class="footer">kaoutal.vercel.app</div>
+  </div>
+
+  <script>
+    const grid = document.getElementById('qrGrid');
+    for (let i = 0; i < 81; i++) {
+      const cell = document.createElement('div');
+      if (Math.random() > 0.4) cell.classList.add('bg');
+      grid.appendChild(cell);
+    }
+  </script>
+</body>
+</html>

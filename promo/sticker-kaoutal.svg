@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#0d9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cercle fond -->
+  <circle cx="100" cy="100" r="98" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="93" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Icône -->
+  <text x="100" y="75" text-anchor="middle" font-size="40">🛍️</text>
+
+  <!-- Texte -->
+  <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white">Kaoutal</text>
+  <text x="100" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a7f3d0">Je vends sur Kaoutal</text>
+
+  <!-- URL -->
+  <rect x="30" y="155" width="140" height="20" rx="10" fill="white" opacity="0.2"/>
+  <text x="100" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">kaoutal.vercel.app</text>
+</svg>

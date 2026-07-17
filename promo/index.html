@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo Kaoutal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #111; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 32px; color: #059669; margin-bottom: 10px; }
+    h2 { font-size: 20px; color: #065f46; margin: 30px 0 15px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; }
+    p { margin-bottom: 15px; color: #374151; }
+    .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .card h3 { font-size: 16px; color: #059669; margin-bottom: 8px; }
+    a { color: #059669; }
+    .btn { display: inline-block; background: #059669; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; margin: 5px 0; }
+    .btn:hover { background: #047857; }
+    ul { margin: 10px 0 10px 20px; }
+    li { margin-bottom: 5px; }
+    .badge-preview { width: 150px; display: block; margin: 10px 0; }
+    .steps { counter-reset: step; }
+    .steps li { list-style: none; position: relative; padding-left: 35px; margin-bottom: 15px; }
+    .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: #059669; color: white; border-radius: 50%; text-align: center; font-size: 13px; line-height: 24px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📢 Kit Promotionnel Kaoutal</h1>
+    <p>Tous les supports prêts à imprimer pour promouvoir Kaoutal hors-ligne.</p>
+
+    <div class="card">
+      <h2>🖨️ 1. Flyer (A5)</h2>
+      <p>Flyer recto imprimable. Format A5 (148×210mm).</p>
+      <a href="flyer-a-imprimer.html" class="btn" target="_blank">📄 Voir le flyer</a>
+      <p style="font-size:13px;color:#6b7280;margin-top:5px;">→ Ouvrir, puis Fichier &gt; Imprimer ou Ctrl+P</p>
+    </div>
+
+    <div class="card">
+      <h2>🔄 2. Stickers (Ø 6-8 cm)</h2>
+      <p>Stickers ronds à coller sur vitrine, voiture, téléphone.</p>
+      <a href="sticker-kaoutal.svg" class="btn" target="_blank">🎨 Télécharger sticker SVG</a>
+      <p style="font-size:13px;color:#6b7280;margin-top:5px;">→ Imprimer sur papier autocollant (format A4, 6 stickers par page)</p>
+    </div>
+
+    <div class="card">
+      <h2>⭐ 3. Badge Ambassadeur</h2>
+      <p>Badge numéroté pour les premiers vendeurs inscrits.</p>
+      <a href="badge-ambassadeur.svg" class="btn" target="_blank">🏅 Télécharger badge SVG</a>
+      <p style="font-size:13px;color:#6b7280;margin-top:5px;">→ Modifier le "N°001" avec le numéro du vendeur, imprimer sur papier cartonné</p>
+    </div>
+
+    <div class="card">
+      <h2>📋 4. Plan d'action terrain</h2>
+      <ol class="steps">
+        <li><strong>Imprime 50 flyers</strong> chez un imprimeur local (~15 000 GNF)</li>
+        <li><strong>Achète 2 planches de stickers autocollants</strong> (~5 000 GNF)</li>
+        <li><strong>Colle les stickers</strong> au Marché Madina, Taouyah, Gbessia, Entag</li>
+        <li><strong>Distribue les flyers</strong> aux commerçants dans les marchés</li>
+        <li><strong>Propose le badge "Ambassadeur"</strong> aux 10 premiers vendeurs inscrits</li>
+        <li><strong>Demande à chaque ambassadeur</strong> de coller un sticker sur sa vitrine</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>💰 Budget estimé</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:8px 0;">50 flyers (impression couleur)</td>
+          <td style="padding:8px 0;text-align:right;">~15 000 GNF</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:8px 0;">2 planches de stickers</td>
+          <td style="padding:8px 0;text-align:right;">~5 000 GNF</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:8px 0;">10 badges cartonnés</td>
+          <td style="padding:8px 0;text-align:right;">~3 000 GNF</td>
+        </tr>
+        <tr style="font-weight:bold;color:#059669;">
+          <td style="padding:8px 0;">Total</td>
+          <td style="padding:8px 0;text-align:right;">~23 000 GNF (≈2,5 €)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="text-align:center;margin-top:30px;padding:20px;background:#ecfdf5;border-radius:12px;">
+      <p style="color:#065f46;font-weight:bold;">Prêt à conquérir le marché guinéen ? 🇬🇳</p>
+      <a href="https://kaoutal.vercel.app" target="_blank" style="color:#059669;">kaoutal.vercel.app</a>
+    </div>
+  </div>
+</body>
+</html>
