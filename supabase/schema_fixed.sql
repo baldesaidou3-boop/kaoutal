@@ -133,6 +133,7 @@ CREATE INDEX IF NOT EXISTS idx_orders_buyer ON orders(buyer_id);
 CREATE INDEX IF NOT EXISTS idx_order_items_seller ON order_items(seller_id);
 CREATE INDEX IF NOT EXISTS idx_cart_items_cart ON cart_items(cart_id);
 
+ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE sellers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
@@ -246,5 +247,10 @@ DO $$ BEGIN
     order_id IN (SELECT id FROM orders WHERE buyer_id = auth.uid())
     OR seller_id = auth.uid()
   );
+  EXCEPTION WHEN duplicate_object THEN NULL;
+END $$;
+
+DO $$ BEGIN
+  CREATE POLICY "Categories are public" ON categories FOR SELECT USING (true);
   EXCEPTION WHEN duplicate_object THEN NULL;
 END $$;

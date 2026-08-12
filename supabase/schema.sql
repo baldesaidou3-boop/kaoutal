@@ -145,6 +145,7 @@ CREATE INDEX idx_order_items_seller ON order_items(seller_id);
 CREATE INDEX idx_cart_items_cart ON cart_items(cart_id);
 
 -- RLS Policies
+ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE sellers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
@@ -152,6 +153,9 @@ ALTER TABLE carts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE cart_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
 ALTER TABLE order_items ENABLE ROW LEVEL SECURITY;
+
+-- Categories: lecture publique
+CREATE POLICY "Categories are public" ON categories FOR SELECT USING (true);
 
 -- Profiles: lecture publique, écriture propre profil
 CREATE POLICY "Profiles are public" ON profiles FOR SELECT USING (true);
